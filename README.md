@@ -28,8 +28,6 @@ the connections were made on the back of the board according to the schematics d
 ![our circuit](https://user-images.githubusercontent.com/107586157/176541063-b7465c39-da76-41f2-b240-bf56e5ab83b7.jpg)
 # Code & Thingspeak
 ```C
-
-
 ```
 
 
