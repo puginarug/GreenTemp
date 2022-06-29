@@ -3,5 +3,5 @@ Temporal and spatial temperature measurement in a greenhouse - Agrotech course f
 # Components
 
 # Building the circuit
-![Alt text](/our circuit.jpg?raw=true "Title")
+![Alt text](/GreeTemp/our circuit.jpg?raw=true "Title")
 # Code & Thingspeak
