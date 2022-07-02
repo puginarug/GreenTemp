@@ -25,6 +25,19 @@ the connections were made on the back of the board according to the schematics d
 - Purple wire: SDA
 
 
+#Instructions
+We made 3 copies of the project that is shown above, in order to take temperature samples from all over the greenhouse.
+For each project:
+- We've soldered the required components to a stripboard, whereas components that are more expensive or reusable (ESP32, multiplexers, etc.) were not soldered directly, but had attachments that were soldered to the stripboard.
+- We connected each sensor to a cable, in order to give us more flexibility with the project placement and for exceeding the measuring range of the project.
+- Each board was encapsulated in a humidity-proof plastic box in order to keep the electric components dry and safe.
+- The project is powered by a 12V power source, which is converted to a 5V with the help of a buck-converter.
+- Each box is placed in the desired locations, according to the researcher's interest.
+ 
+In this project, we were interested in taking samples and analyzing temperature points in the greenhouse, while examining the change of temperatures as a function of:
+  1. The height of the sample point.
+  2. The distance of the sample point from the greenhouse's cooling pad system.
+
 ![our circuit](https://user-images.githubusercontent.com/107586157/176541063-b7465c39-da76-41f2-b240-bf56e5ab83b7.jpg)
 # Code & Thingspeak
 ```C
