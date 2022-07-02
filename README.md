@@ -25,7 +25,7 @@ the connections were made on the back of the board according to the schematics d
 - Purple wire: SDA
 
 
-#Instructions
+# Instructions
 We made 3 copies of the project that is shown above, in order to take temperature samples from all over the greenhouse.
 For each project:
 - We've soldered the required components to a stripboard, whereas components that are more expensive or reusable (ESP32, multiplexers, etc.) were not soldered directly, but had attachments that were soldered to the stripboard.
