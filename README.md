@@ -42,6 +42,7 @@ the connections were made on the back of the board according to the schematics d
 - Purple wire: SDA
 ![our circuit](https://user-images.githubusercontent.com/107586157/176541063-b7465c39-da76-41f2-b240-bf56e5ab83b7.jpg)
 # Code & Thingspeak
+### Preperation ###
 in order to proceed with the code make sure the following libraries are installed:
 - OneWire
 - Adafruit_Unified_Sensor
@@ -59,6 +60,33 @@ In order to find the address we first need to assemble the next circuit:
 upload the next code to the ESP32 in order to see the DS18B20 code:
 
 ```C++
+#include <OneWire.h>
+
+// Based on the OneWire library example
+
+OneWire ds(33);  //data wire connected to GPIO 33
+
+void setup(void) {
+  Serial.begin(115200);
+}
+
+void loop(void) {
+  byte i;
+  byte addr[8];
+  
+  if (!ds.search(addr)) {
+    Serial.println(" No more addresses.");
+    Serial.println();
+    ds.reset_search();
+    delay(250);
+    return;
+  }
+  Serial.print(" ROM =");   //Printing the serial numbers of the sensors
+  for (i = 0; i < 8; i++) {
+    Serial.write(' ');
+    Serial.print(addr[i], HEX);
+  }
+}
 ```
 
 
