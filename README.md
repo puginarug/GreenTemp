@@ -88,9 +88,7 @@ void loop(void) {
   }
 }
 ```
-After getting our addresses we proceeded and built the circuit mentioned above.
-before we wnt to set up the system we synced the sensors to each other when they were close in the same room.
-we used the next code to do so:
+After getting our addresses we proceeded and built the circuit mentioned above. we used the next code to integrate all of our components:
 
 
 
