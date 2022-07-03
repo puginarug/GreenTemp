@@ -52,6 +52,11 @@ in order to proceed with the code make sure the following libraries are installe
 after installing all the relevant libraries we shall proceed.
 first of all is finding the DS18B20 addresses. in order to read this component the address is needed, each one has a unique address so it lets us read pretty much as many as we want as long as we have its address.
 In order to find the address we first need to assemble the next circuit:
+<p align="center">
+<img src="https://user-images.githubusercontent.com/107586157/177033550-8902eeaa-9344-484f-84fa-824816cc395d.jpg" width="500">
+</p>
+
+upload the next code to the ESP32 in order to see the DS18B20 code:
 
 ```C++
 ```
