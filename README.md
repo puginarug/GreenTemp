@@ -17,12 +17,7 @@ the finnished board looked like this:
 <p align="center">
 <img src="https://user-images.githubusercontent.com/107586157/176545093-fced8147-ff82-42ee-ba7c-0c1321bde8c0.jpg" width="500">
 </p>
-the connections were made on the back of the board according to the schematics down below:
 
-- Red wire: power (3.3V)
-- Black wire: Ground
-- Blue wire: SCA and data
-- Purple wire: SDA
 
 
 # Instructions
@@ -39,9 +34,26 @@ In this project, we were interested in taking samples and analyzing temperature 
   2. The distance of the sample point from the greenhouse's cooling pad system.
 
 # Our Circuit Diagram
+the connections were made on the back of the board according to the schematics down below:
+
+- Red wire: power (3.3V)
+- Black wire: Ground
+- Blue wire: SCA and data
+- Purple wire: SDA
 ![our circuit](https://user-images.githubusercontent.com/107586157/176541063-b7465c39-da76-41f2-b240-bf56e5ab83b7.jpg)
 # Code & Thingspeak
-```C
+in order to proceed with the code make sure the following libraries are installed:
+- OneWire
+- Adafruit_Unified_Sensor
+- Adafruit_SHT31_Library
+- DallasTemperature
+- ThingSpeak
+
+after installing all the relevant libraries we shall proceed.
+first of all is finding the DS18B20 addresses. in order to read this component the address is needed, each one has a unique address so it lets us read pretty much as many as we want as long as we have its address.
+In order to find the address we first need to assemble the next circuit:
+
+```C++
 ```
 
 
