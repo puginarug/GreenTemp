@@ -225,3 +225,5 @@ void loop() {
   delay(5000);
 }
 ```
+# Data Analysis
+In order to get a 3d plot containing the current temperatures from all the sensor, run the code from the attached file: 'Agtech_final_project_3D_Temp_plotting'.
