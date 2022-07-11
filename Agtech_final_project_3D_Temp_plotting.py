@@ -6,6 +6,8 @@ Created on Fri Jul  1 15:18:37 2022
 """
 
 import urllib.request
+from matplotlib import axes, axis
+from matplotlib.collections import PolyCollection
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -13,6 +15,7 @@ import os.path
 import matplotlib.dates as mdates
 import datetime as dt
 import matplotlib as mpl
+from matplotlib import cm
 from pandas.tseries.frequencies import to_offset
 #from scipy.signal import savgol_filter
 
@@ -59,9 +62,9 @@ file.write(d.decode('UTF-8'))
 file.close()
 
 # opening files as data frames
-station1=pd.read_csv("Station1.csv")
-station2=pd.read_csv("Station2.csv")
-station3=pd.read_csv("Station3.csv")
+station1 = pd.read_csv("Station1.csv")
+station2 = pd.read_csv("Station2.csv")
+station3 = pd.read_csv("Station3.csv")
 
 # defining the file containing all average tempartures and sensor locations (the main file)
 filename4 = "Final Sensor Locations & Measurments.csv"
@@ -95,15 +98,50 @@ mean_list = [avg_box1_sht1, avg_box1_sht2, avg_box1_ds1_15, avg_box1_ds1_11, avg
 
 # updating the main file
 df4['temp_c'] = mean_list
+# replacing negative temp reads with 'nan'
+df4['temp_c']=df4['temp_c'].mask(df4['temp_c'].lt(0), np.nan)
 
 # creating the 3d graph
-fig = plt.figure(figsize=(10, 10))
-ax = fig.add_subplot(projection='3d')
 
+""" #plotting the greenhouse
+#walls (read as a matrix, every colums is a position vector for the polygon corner)
+x_walls =  [0,0,0,  0],      [15,15,15,15],[15,0,0,15],  [15,0,0,15]
+y_walls = [0,0,6.5,6.5]  , [0,6.5,6.5,0],[0,0,0,0],    [6.5,6.5,6.5,6.5]
+z_walls =  [0,  2.1,2.1,0], [0,0,2.1,2.1],[0,0,2.1,2.1],[0,0,2.1,2.1]
+
+surfaces = []
+
+for i in range(len(x_walls)):
+    surfaces.append( [list(zip(x_walls[i],y_walls[i],z_walls[i]))] )
+
+for surface in surfaces:
+    axes.add_collection3d(PolyCollection(surface,ec='b',fc=(0, 0, 0, 0)))
+
+#roof
+x_roof = [15,0,0,15],     [0,15,15,0],          [0,0,0],[15,15,15]
+y_roof = [0,0,3.25, 3.25],[6.5,6.5,3.25,3.25],  [0,3.25,6.5],[0,3.25,6.5]
+z_roof = [2.1,2.1,3,3],   [2.1,2.1,3,3],        [2.1,3,2.1],[2.1,3,2.1]
+
+surfaces = []
+
+for i in range(len(x_roof)):
+    surfaces.append( [list(zip(x_roof[i],y_roof[i],z_roof[i]))] )
+
+for surface in surfaces:
+    axis.add_collection3d(PolyCollection(surface,ec='r',fc=(0., 0., 0., 0.)))
+fig = plt.figure(figsize=(10, 10))
+ax = fig.add_subplot(projection='3d') """
+
+#sensors
 x = df4.lengh_windows
 y = df4.width_m
 z = df4.hight_m
 t = df4.temp_c
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+surf = ax.plot_trisurf(x, y, z, cmap=cm.coolwarm, linewidth=0)
 
 ax.set_xlabel('$length$')
 ax.set_ylabel('$width$')
