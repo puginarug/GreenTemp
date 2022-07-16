@@ -17,6 +17,8 @@ import datetime as dt
 import matplotlib as mpl
 from matplotlib import cm
 from pandas.tseries.frequencies import to_offset
+from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 #from scipy.signal import savgol_filter
 
 # define names of files
@@ -99,55 +101,62 @@ mean_list = [avg_box1_sht1, avg_box1_sht2, avg_box1_ds1_15, avg_box1_ds1_11, avg
 # updating the main file
 df4['temp_c'] = mean_list
 # replacing negative temp reads with 'nan'
-df4['temp_c']=df4['temp_c'].mask(df4['temp_c'].lt(0), np.nan)
+df4['temp_c']=df4['temp_c'].mask(df4['temp_c'].gt(60) | df4['temp_c'].lt(0), np.nan)
 
 # creating the 3d graph
 
-""" #plotting the greenhouse
+fig = plt.figure(figsize=(10,5))
+ax = Axes3D(fig)
+
+#code for plotting the greenhouse was taken from Amir Shefer: 
 #walls (read as a matrix, every colums is a position vector for the polygon corner)
-x_walls =  [0,0,0,  0],      [15,15,15,15],[15,0,0,15],  [15,0,0,15]
-y_walls = [0,0,6.5,6.5]  , [0,6.5,6.5,0],[0,0,0,0],    [6.5,6.5,6.5,6.5]
-z_walls =  [0,  2.1,2.1,0], [0,0,2.1,2.1],[0,0,2.1,2.1],[0,0,2.1,2.1]
+x =  [0,0,0,  0],      [15,15,15,15],[15,0,0,15],  [15,0,0,15]
+y = [0,0,6.5,6.5]  , [0,6.5,6.5,0],[0,0,0,0],    [6.5,6.5,6.5,6.5]
+z =  [0,  2.1,2.1,0], [0,0,2.1,2.1],[0,0,2.1,2.1],[0,0,2.1,2.1]
 
 surfaces = []
 
-for i in range(len(x_walls)):
-    surfaces.append( [list(zip(x_walls[i],y_walls[i],z_walls[i]))] )
+for i in range(len(x)):
+    surfaces.append( [list(zip(x[i],y[i],z[i]))] )
 
 for surface in surfaces:
-    axes.add_collection3d(PolyCollection(surface,ec='b',fc=(0, 0, 0, 0)))
+    ax.add_collection3d(Poly3DCollection(surface,ec='b',fc=(0, 0, 0, 0)))
 
 #roof
-x_roof = [15,0,0,15],     [0,15,15,0],          [0,0,0],[15,15,15]
-y_roof = [0,0,3.25, 3.25],[6.5,6.5,3.25,3.25],  [0,3.25,6.5],[0,3.25,6.5]
-z_roof = [2.1,2.1,3,3],   [2.1,2.1,3,3],        [2.1,3,2.1],[2.1,3,2.1]
+x = [15,0,0,15],     [0,15,15,0],          [0,0,0],[15,15,15]
+y = [0,0,3.25, 3.25],[6.5,6.5,3.25,3.25],  [0,3.25,6.5],[0,3.25,6.5]
+z = [2.1,2.1,3.5,3.5],   [2.1,2.1,3.5,3.5],        [2.1,3.5,2.1],[2.1,3.5,2.1]
 
 surfaces = []
 
-for i in range(len(x_roof)):
-    surfaces.append( [list(zip(x_roof[i],y_roof[i],z_roof[i]))] )
+for i in range(len(x)):
+    surfaces.append( [list(zip(x[i],y[i],z[i]))] )
 
 for surface in surfaces:
-    axis.add_collection3d(PolyCollection(surface,ec='r',fc=(0., 0., 0., 0.)))
-fig = plt.figure(figsize=(10, 10))
-ax = fig.add_subplot(projection='3d') """
+    ax.add_collection3d(Poly3DCollection(surface,ec='r',fc=(0., 0., 0., 0.)))
+
+ax.set_xlim(0,16)    
+ax.set_ylim(0,8)    
+ax.set_zlim(0,4)    
+
+ax.legend(loc=(-0.4,0.1))
+plt.rcParams['grid.color'] = (0.5, 0.5, 0.5, 0)
 
 #sensors
-x = df4.lengh_windows
+x = df4.lengh_m
 y = df4.width_m
 z = df4.hight_m
 t = df4.temp_c
 
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-
 surf = ax.plot_trisurf(x, y, z, cmap=cm.coolwarm, linewidth=0)
+
+img = ax.scatter(x, y, z, c=t, cmap=plt.get_cmap("plasma"))
+fig.colorbar(img)
 
 ax.set_xlabel('$length$')
 ax.set_ylabel('$width$')
 ax.set_zlabel('$hight$')
-plt.legend(loc="upper left")
 
-img = ax.scatter(x, y, z, c=t, cmap=plt.get_cmap("plasma"))
-fig.colorbar(img)
+#plt.legend(loc="upper left")
+
 plt.show()
