@@ -1,5 +1,5 @@
 # GreenTemp
-Temporal and spatial temperature measurement in a greenhouse - Agrotech course final project.
+Temporal and spatial temperature measurement in a greenhouse - Agrotech course final project.<br>
 Our main goals:
 1. Having fun 🥳
 2. Examining the change of temperatures inside the greenhouse as a function of:
