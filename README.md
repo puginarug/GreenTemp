@@ -1,5 +1,10 @@
 # GreenTemp
 Temporal and spatial temperature measurement in a greenhouse - Agrotech course final project.
+Our main goals:
+1. Having fun 🥳
+2. Examining the change of temperatures inside the greenhouse as a function of:
+    - The height of the sample point.
+    - The distance of the sample point from the greenhouse's cooling pad system.
 
 # Building the circuit
 In order to build one measuring station we used the following parts:
@@ -32,10 +37,6 @@ For each project:
 - Each board was encapsulated in a humidity-proof plastic box in order to keep the electric components dry and safe.
 - The project is powered by a 12V power source, which is converted to a 5V with the help of a buck-converter.
 - Each box is placed in the desired locations, according to the researcher's interest.
- 
-In this project, we were interested in taking samples and analyzing temperature points in the greenhouse, while examining the change of temperatures as a function of:
-  1. The height of the sample point.
-  2. The distance of the sample point from the greenhouse's cooling pad system.
 
 # Our Circuit Diagram
 the connections were made on the back of the board according to the schematics down below:
