@@ -38,9 +38,9 @@ For each project:
 - The project is powered by a 12V power source, which is converted to a 5V with the help of a buck-converter.
 - Each box is placed in the desired locations, according to the researcher's interest.
 
-![A GIF](/Images/giphy.gif)
+![A GIF](https://media1.giphy.com/media/xUNd9Z3IC4IwJ1uLjG/giphy.gif?cid=ecf05e47fbe75gfwukjvw7pw0nf0wnh708c2cdkuaogn1j3m&rid=giphy.gif&ct=g)
 <p>
-    <img src="/Images/giphy.gif" width="480" height="360" frameBorder="0">
+    <img src="https://media1.giphy.com/media/xUNd9Z3IC4IwJ1uLjG/giphy.gif?cid=ecf05e47fbe75gfwukjvw7pw0nf0wnh708c2cdkuaogn1j3m&rid=giphy.gif&ct=g" width="480" height="360" frameBorder="0">
 </p>
 
 # Our Circuit Diagram
