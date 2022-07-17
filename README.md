@@ -38,7 +38,6 @@ For each project:
 - The project is powered by a 12V power source, which is converted to a 5V with the help of a buck-converter.
 - Each box is placed in the desired locations, according to the researcher's interest.
 
-<iframe src="https://giphy.com/embed/xUNd9Z3IC4IwJ1uLjG" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/splat-nicksplat-rocket-power-xUNd9Z3IC4IwJ1uLjG">via GIPHY</a></p>
 
 # Our Circuit Diagram
 the connections were made on the back of the board according to the schematics down below:
