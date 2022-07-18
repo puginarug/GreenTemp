@@ -1,4 +1,3 @@
-# Building the circuit
 # Components
 In order to build one measuring station we used the following parts:
 1. 1x ESP32.<br>
