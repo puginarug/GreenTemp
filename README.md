@@ -9,8 +9,8 @@ Our main goals:
 [Building The Cicuit](Site/Building-the-system.md)
 
 [Code and Cloud](Site/Code-Cloud.md)
-# Code & Thingspeak
-### Preperation ###
+
+[Data Analasys](Site/Data-Analasys.md)
 
 
 
