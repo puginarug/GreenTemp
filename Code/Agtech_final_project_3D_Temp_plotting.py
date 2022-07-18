@@ -62,7 +62,7 @@ station2 = pd.read_csv("Station2.csv")
 station3 = pd.read_csv("Station3.csv")
 
 # defining the file containing all average tempartures and sensor locations (the main file)
-filename4 = "Final Sensor Locations & Measurments.csv"
+filename4 = "Other/Final Sensor Locations & Measurments.csv"
 df4 = pd.read_csv(filename4)
 
 # calculating mean temp for each sensor
