@@ -10,27 +10,7 @@ Our main goals:
 
 # Code & Thingspeak
 ### Preperation ###
-All of the code used in this project is found in the 'Code' folder.
 
-In order to proceed with the code make sure the following libraries are installed:
-- OneWire
-- Adafruit_Unified_Sensor
-- Adafruit_SHT31_Library
-- DallasTemperature
-- ThingSpeak
-
-after installing all the relevant libraries we shall proceed.
-first of all is finding the DS18B20 addresses. in order to read this component the address is needed, each one has a unique address so it lets us read pretty much as many as we want as long as we have its address.
-In order to find the address we first need to assemble the next circuit:
-<p align="center">
-<img src="https://user-images.githubusercontent.com/107586157/177033550-8902eeaa-9344-484f-84fa-824816cc395d.jpg" width="500">
-</p>
-
-Now we are going to find the address of each one of the DS18B20 sensors. 
-In order to do that, flash the code inside of 'find_DS18B20.ino' to your ESP32.
-
-After getting the addresses we proceeded and built the circuit mentioned above. We used the code found in 'symphonyOfSensors.ino' to integrate all of our components.
-Go ahead and boot it to your ESP32.
 
 
 
