@@ -5,7 +5,7 @@ Our main goals:
 2. Examining the change of temperatures inside the greenhouse as a function of:
     - The height of the sample point.
     - The distance of the sample point from the greenhouse's cooling pad system.
-
+[Building The Cicuit]("Building the system.md")
 
 # Code & Thingspeak
 ### Preperation ###
