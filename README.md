@@ -8,6 +8,7 @@ Our main goals:
 
 [Building The Cicuit](Building-the-system.md)
 
+[Code and Cloud](Code-Cloud.md)
 # Code & Thingspeak
 ### Preperation ###
 
