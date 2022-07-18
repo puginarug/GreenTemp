@@ -6,17 +6,10 @@ Created on Fri Jul  1 15:18:37 2022
 """
 
 import urllib.request
-from matplotlib import axes, axis
-from matplotlib.collections import PolyCollection
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import os.path
-import matplotlib.dates as mdates
-import datetime as dt
-import matplotlib as mpl
 from matplotlib import cm
-from pandas.tseries.frequencies import to_offset
 from mpl_toolkits.mplot3d import Axes3D
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 #from scipy.signal import savgol_filter
@@ -160,3 +153,9 @@ ax.set_zlabel('$hight$')
 #plt.legend(loc="upper left")
 
 plt.show()
+
+#saving the plot
+#my_path = os.path.abspath("C:\\Users\\zinge\\Documents\\BSc\\Y2\\S2\\Agrotech lab\\Code\\Final Project\\Saved Plots")
+#date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
+#my_file = 'f"3D_Temp_Plot_{date}".png'
+#plt.savefig(my_path, my_file)
