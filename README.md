@@ -12,7 +12,6 @@ Our main goals:
 
 [Data Analasys](Site/Data-Analasys.md)
 
-
-
-
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/107586157/179543645-cdd3d666-dfe3-44b4-be77-fe74b1a7ef95.jpeg" width="450">
+</p>
