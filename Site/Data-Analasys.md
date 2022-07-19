@@ -57,7 +57,7 @@ grid minor
 
 
 In order to get a 3d plot containing the current temperatures from all the sensor, run the code from the attached file: 'Agtech_final_project_3D_Temp_plotting'.
-or copy the code from here: 
+or copy the code below: 
 ```Python
 import urllib.request
 import matplotlib.pyplot as plt
