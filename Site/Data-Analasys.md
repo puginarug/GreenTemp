@@ -4,6 +4,58 @@ All our data is available in the following ThingSpeak sites  (all sensors and co
 - <a href=https://thingspeak.com/channels/1766721> Box 2</a>
 - <a href=https://thingspeak.com/channels/1777982> Box 3</a>
 
+In those channels you can find a sensors raw data which looks like that:
+<p align="center">
+<img src="https://user-images.githubusercontent.com/107586157/179692355-708092a5-4695-4d57-a0f0-9f4da243f18c.png" width="500">
+</p>
+and a matlab comparison between all sensors of the station:
+<p align="center">
+<img src="https://user-images.githubusercontent.com/107586157/179692849-e59d5204-a5ab-4063-841f-482e72bb13d9.png" width="500">
+</p>
+the matlab code for the comparison is found here below:
+
+```matlab
+% Prior to running this MATLAB code template, assign the channel ID to read
+% data from to the 'readChannelID' variable. Also, assign the field ID
+% within the channel that you want to read data from to plot. 
+
+% TODO - Replace the [] with channel ID to read data from:
+readChannelID = [1777871];
+% TODO - Replace the [] with the Field ID to read data from:
+fieldID1 = [1,2,3,4,5,6];
+
+% Channel Read API Key 
+% If your channel is private, then enter the read API
+% Key between the '' below: 
+readAPIKey = 'C8XSRFSFYB0DHKAL';
+
+%% Read Data (if you want more valeus then change it here %%
+
+
+[data, time] = thingSpeakRead(readChannelID, 'Field', fieldID1, 'NumPoints', 8000, 'ReadKey', readAPIKey);
+
+data(data == -127) = NaN;
+%% Visualize Data %%
+
+plot(time, data);
+
+%% Lable name %%
+ylabel('Temperature (c)') 
+
+%% Legend name %%
+legend({'sht1 ','sht2 ','ds1-15','ds1-11','ds1-13','ds1-14'},'Location','northwest')
+
+%% Grid %%
+grid on
+grid minor
+
+%ylim([-1 37])
+```
+
+
+
+
+
 In order to get a 3d plot containing the current temperatures from all the sensor, run the code from the attached file: 'Agtech_final_project_3D_Temp_plotting'.
 or copy the code from here: 
 ```Python
