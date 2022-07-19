@@ -15,4 +15,4 @@ Our main goals:
 
 <p align="center">
     
-<img src="https://user-images.githubusercontent.com/101471376/179741017-11caa07b-bd83-4dee-b727-e975a256a92f.jpg" width="48")>
+<img src="https://user-images.githubusercontent.com/101471376/179741017-11caa07b-bd83-4dee-b727-e975a256a92f.jpg" width="48">
