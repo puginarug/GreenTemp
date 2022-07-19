@@ -12,7 +12,7 @@ In order to build one measuring station we used the following parts:
 6. 1x <a href=https://www.electricaltechnology.org/2019/11/12v-to-5v-converter-circuit.html>buck converter</a> 12V to 5V (expendable if chosen to connect via USB)<br>
     
 
-in order to assmble it on top of the prototype board we had to use some Male to Female mounts that were souldred to the board itself. a 3-wire connector and two 4 wire connectors. The circuit itself was assembled with thin coated wires that were wire turned on top of the souldered pins. the SHT-31 sensors were all connected via 4 core wire and mounts that we crimped on to the wires. Similarly done we took four 4 core wires that were crimped in one side and braided them in order to connect the DS18B20
+In order to assmble it on top of the prototype board we had to use some Male to Female mounts that were soldred to the board itself. A 3-wire connector and two 4 wire connectors. The circuit itself was assembled with thin coated wires that were wire turned on top of the soldered pins. The SHT-31 sensors were all connected via 4-core wire and mounts that we crimped on to the wires. Similarly done we took four 4-core wires that were crimped in one side and braided them in order to connect the DS18B20.
 <p align="center">
 <img src="https://user-images.githubusercontent.com/107586157/179503265-cf8b6dca-74e1-472b-b501-014e89592f5e.jpg"
  width="250">
@@ -30,7 +30,7 @@ the finnished board looked like this:
 
 
 # Instructions
-We made 3 copies of the circuit that is shown below, in order to take temperature samples from all over the greenhouse.
+We made 3 copies of the circuit shown below, in order to take temperature samples from all over the greenhouse.
 For each circuit:
 - We've soldered the required components to a stripboard, whereas components that are more expensive or reusable (ESP32, multiplexers, etc.) were not soldered directly, but had attachments that were soldered to the stripboard. 
 
@@ -39,7 +39,7 @@ For each circuit:
  width="500">
 </p>
 
-- The cables of the circuit it self were wire turned on top of the pins sticking from the bottom of the board.
+- The cables of the circuit itself were wire turned on top of the pins sticking from the bottom of the board.
 The end product eventually looked like this:
 <p align="center">
 <img src="https://user-images.githubusercontent.com/107586157/179501659-e907ddfa-2379-4350-8548-bf6f3d85b60d.jpg"
@@ -57,7 +57,7 @@ The end product eventually looked like this:
 </p>
 
 # Our Circuit Diagram
-the connections were made on the back of the board according to the schematics down below:
+The connections were made on the back of the board according to the schematics down below:
 
 - Red wire: power (3.3V)
 - Black wire: Ground
@@ -65,7 +65,7 @@ the connections were made on the back of the board according to the schematics d
 - Purple wire: SDA
 ![our circuit](https://user-images.githubusercontent.com/107586157/176541063-b7465c39-da76-41f2-b240-bf56e5ab83b7.jpg)
 
-# Placenent In the Greenhouse
+# Placement In the Greenhouse
 In the next diagram you can see how we placed our sensors in the green house:
 
 
