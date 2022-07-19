@@ -65,7 +65,12 @@ the connections were made on the back of the board according to the schematics d
 - Purple wire: SDA
 ![our circuit](https://user-images.githubusercontent.com/107586157/176541063-b7465c39-da76-41f2-b240-bf56e5ab83b7.jpg)
 
+# Placenent In the Greenhouse
+In the next diagram you can see how we placed our sensors in the green house:
 
 
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/107586157/179716474-ea1f0dcb-6fa3-47ad-b6d6-496f8eecfdbb.jpg"
+ width="500">
+</p>
 
