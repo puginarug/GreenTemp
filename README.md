@@ -8,8 +8,8 @@ Our main goals:
     - Does the cooling system cool the whole space equally?
     
 In order to answer these questions, we built a system that lets us examin the change of temperatures inside the greenhouse as a function of:
-1. The height of the sample point.
-2. The distance of the sample point from the greenhouse's cooling pad system.
+- The height of the sample point.
+- The distance of the sample point from the greenhouse's cooling pad system.
 
 [Building The Cicuit](Site/Building-the-system.md)
 
