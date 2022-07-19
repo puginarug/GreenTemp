@@ -9,7 +9,7 @@ In order to build one measuring station we used the following parts:
 4. 4x <a href=https://components101.com/sensors/ds18b20-temperature-sensor>DS18B20</a> Thermometers (more can be connected)<br>
     
 5. 1x 4.7kΩ Resistor
-6. 1x <a href=https://www.electricaltechnology.org/2019/11/12v-to-5v-converter-circuit.html>buck converter</a> 12V to 5V (didactable if chosen to connect via USB)<br>
+6. 1x <a href=https://www.electricaltechnology.org/2019/11/12v-to-5v-converter-circuit.html>buck converter</a> 12V to 5V (expendable if chosen to connect via USB)<br>
     
 
 in order to assmble it on top of the prototype board we had to use some Male to Female mounts that were souldred to the board itself. a 3-wire connector and two 4 wire connectors. The circuit itself was assembled with thin coated wires that were wire turned on top of the souldered pins. the SHT-31 sensors were all connected via 4 core wire and mounts that we crimped on to the wires. Similarly done we took four 4 core wires that were crimped in one side and braided them in order to connect the DS18B20
