@@ -15,7 +15,7 @@ In order to answer these questions, we built a system that lets us examin the ch
 
 [Code and Cloud](Site/Code-Cloud.md)
 
-[Data Analasys](Site/Data-Analasys.md)
+[Data Analysis](Site/Data-Analasys.md)
 
 <p align="center">
     
